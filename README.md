@@ -3,6 +3,7 @@ Daily Habit Tracker
 
 A Java application to track daily habits, log progress, view statistics, and get reminders. Built with OOP principles, JavaFX for the GUI, and JDBC with SQLite for persistent storage.
 
+<<<<<<< HEAD
 ## Project Overview
 
 Title: Daily Habit Tracker
@@ -32,6 +33,9 @@ Brief Description: A user-friendly app to manage habits (e.g., "Drink 2L water,"
 - Abstraction, Abstract Classes and Interfaces  
 - Encapsulation  
 - Packages, Access Modifiers  
+=======
+Project Overview
+>>>>>>> 0251a6b275c9fc6ae344b0c2d21887ca6c32f19a
 
 Title: Daily Habit Tracker
 
@@ -43,6 +47,7 @@ Problem: Maintaining consistent habits is hard without tracking or reminders. Si
 
 Target Users: Students, professionals, or anyone building habits (e.g., exercising, reading). Ideal for students to track study goals.
 
+<<<<<<< HEAD
 OOP Concepts Used
 
 Encapsulation: Private fields (e.g., habit name, progress) with public getters/setters.
@@ -55,3 +60,14 @@ Polymorphism: Overridden methods like markComplete in subclasses.
 
 
 Abstraction: HabitTracker and HabitStorage hide logic for habit management and database I/O.
+=======
+OOP Concepts Used:
+
+Encapsulation: Private fields (e.g., habit name, progress) with public getters/setters.
+Inheritance: WeeklyHabit extends Habit for weekly-specific logic.
+Polymorphism: Overridden methods like markComplete in subclasses.
+
+
+
+Abstraction: HabitTracker and HabitStorage hide logic for habit management and database I/O.
+>>>>>>> 0251a6b275c9fc6ae344b0c2d21887ca6c32f19a
