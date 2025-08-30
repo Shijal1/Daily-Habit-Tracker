@@ -8,8 +8,8 @@ import java.util.Scanner;
  */
 class Habit {
     private String name;
-    private int goal;       // e.g., number of times per day
-    private int progress;   // completed times
+    private int goal;       
+    private int progress;
 
     // Constructor
     public Habit(String name, int goal) {
@@ -186,16 +186,16 @@ public class HabitTrackerApp {
             sc.nextLine(); // consume newline
 
             switch (choice) {
-                case 1:
+                case 1 -> {
                     System.out.print("Enter habit name: ");
                     String name = sc.nextLine();
                     System.out.print("Enter goal (times per day): ");
                     int goal = sc.nextInt();
                     sc.nextLine();
                     tracker.addHabit(new Habit(name, goal));
-                    break;
+                }
 
-                case 2:
+                case 2 -> {
                     System.out.print("Enter weekly habit name: ");
                     String wname = sc.nextLine();
                     System.out.print("Enter goal (times per week): ");
@@ -204,46 +204,39 @@ public class HabitTrackerApp {
                     int day = sc.nextInt();
                     sc.nextLine();
                     tracker.addHabit(new WeeklyHabit(wname, wgoal, day));
-                    break;
+                }
 
-                case 3:
+                case 3 -> {
                     System.out.print("Enter habit name to mark complete: ");
                     String habitName = sc.nextLine();
                     tracker.markHabit(habitName);
-                    break;
+                }
 
-                case 4:
-                    tracker.showHabits();
-                    break;
+                case 4 -> tracker.showHabits();
 
-                case 5:
+                case 5 -> {
                     System.out.print("Enter habit name to delete: ");
                     String del = sc.nextLine();
                     tracker.deleteHabit(del);
-                    break;
+                }
 
-                case 6:
+                case 6 -> {
                     System.out.print("Enter habit name to search: ");
                     String search = sc.nextLine();
                     tracker.searchHabit(search);
-                    break;
+                }
 
-                case 7:
+                case 7 -> {
                     System.out.print("Enter habit name to reset: ");
                     String reset = sc.nextLine();
                     tracker.resetHabit(reset);
-                    break;
+                }
 
-                case 8:
-                    tracker.showStats();
-                    break;
+                case 8 -> tracker.showStats();
 
-                case 9:
-                    System.out.println("Exiting Habit Tracker. Goodbye!");
-                    break;
+                case 9 -> System.out.println("Exiting Habit Tracker. Goodbye!");
 
-                default:
-                    System.out.println("Invalid choice, try again.");
+                default -> System.out.println("Invalid choice, try again.");
             }
         } while (choice != 9);
 
